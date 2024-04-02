@@ -3,7 +3,7 @@
 <h1>{{ post.title }}</h1>
 <small>By {{ post.author }}</small> - {{ post.post_date }}
 <br>
-<p>By {{ post.history }}</p>
+<p>By {{ post.history|safe }}</p>
 <br>
 {{post.origin}}
 
