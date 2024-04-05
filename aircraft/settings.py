@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-1j)(upy(^t^a@(s-k(*-=^=95b4x1rx2=l$lzz#$k5p%6#iirk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-grayadamson-aircracfdet-0novs0qodfh.ws-eu110.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-grayadamson-aircracfdet-se5ic02m83r.ws-eu110.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'details',
+    'members',
 ]
 
 MIDDLEWARE = [
