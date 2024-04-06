@@ -9,6 +9,10 @@ from django.urls import reverse_lazy
 #def home(request):
 #    return render(request, "home.html", {})
 
+def TypeView(request, typeDisp):
+    type_posts = Post.objects.filter(type=typeDisp)
+    return render(request, 'type_display.html', {'typeDisp':typeDisp, 'type_posts':type_posts})
+
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
@@ -17,7 +21,7 @@ class HomeView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
-    
+   
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
