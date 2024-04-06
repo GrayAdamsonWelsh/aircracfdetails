@@ -10,7 +10,9 @@
                 - <a href="{% url 'delete_post' post.pk %}">Delete</a>
             {% endif %}
             -  {{ post.post_date }}
-            <br>{{post.history}}</li>
+            <br>{{post.history|safe}}
+            <br>type - {{post.type}}
+        </li>
         {% endfor%}
 </ul>
 
