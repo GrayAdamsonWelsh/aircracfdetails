@@ -7,7 +7,9 @@
 <div class="form-group">
     <form method="POST">
         {% csrf_token  %}
-        <button class="btn btn-secondary">Delete</button>
+        {% if user.is_authenticated %}
+            <button class="btn btn-secondary">Delete</button>
+        {% endif %}
 
     </form>
 </div>
