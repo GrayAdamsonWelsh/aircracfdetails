@@ -9,10 +9,17 @@
                 - <a href="{% url 'update_post' post.pk %}">Edit</a> 
                 - <a href="{% url 'delete_post' post.pk %}">Delete</a>
             {% endif %}
-            -  {{ post.post_date }}
+            <br> Manufacturer -   {{ post.manufacturer }}
+            <br> First Flight - {{ post.firstFlight }}
+            <br> Intoduction - {{ post.introduction }}
+            <br> Status - {{ post.status }}
+            <br> Number Built - {{ post.numberBuilt}}
+            <br> -  {{ post.post_date }}
             <br>{{post.history|safe}}
-            <br>type - {{post.type}}
+            <br>type - <a href="{% url 'type' post.type %}">{{post.type}}</a>
+            <br>
         </li>
+        <br>
         {% endfor%}
 </ul>
 

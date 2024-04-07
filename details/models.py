@@ -17,7 +17,12 @@ class Type(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
+    manufacturer = models.CharField(max_length=50, default="")
+    firstFlight = models.DateField(default='1900-01-01')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    status = models.CharField(max_length=30, default="")
+    introduction = models.DateField(default='1900-01-01')
+    numberBuilt = models.IntegerField(default=0)
     history = models.TextField()
     origin = models.CharField(max_length=255, default="")
     post_date = models.DateField(auto_now_add=True) 

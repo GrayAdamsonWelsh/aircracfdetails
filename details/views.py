@@ -35,8 +35,9 @@ class AddTypeView(CreateView):
     
 class UpdatePostView(UpdateView):
     model = Post
-    form_class = EditForm
+    #form_class = EditForm
     template_name = 'update_post.html'
+    fields = '__all__' 
 
 class DeletePostView(DeleteView):
     model = Post
