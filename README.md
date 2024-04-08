@@ -58,3 +58,6 @@ When logged out no data can be changed
 	3.Ensure its responsive
 	4 Add specifications table and if needed create more pages.
 	5 Add variants table if needed to create more pages.
+
+## Acknowledgment
+	I used guide "Create A Simple Blog With Python and Django" from Codemy on Youtube
