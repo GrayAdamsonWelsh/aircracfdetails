@@ -4,6 +4,7 @@
 <br>
 <br>
 <div>
+    <form method="POST">
         {% csrf_token  %}
         <table>
             <tr>
@@ -35,5 +36,6 @@
         {% if user.is_authenticated %}
             <button class="btn btn-secondary">Add</button>
         {% endif %}
+    </form>
 </div>
 {% endblock %}
