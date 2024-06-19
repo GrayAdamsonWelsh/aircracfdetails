@@ -3,15 +3,41 @@
 <h1>{{ post.title }}</h1>
 <small>By {{ post.author }}</small> - {{ post.post_date }}
 <br>
-<p>By {{ post.history|safe }}</p>
-<br>
-{{post.origin|safe}}
+<table class="table">
+    <tr>
+        <td>Manufacturer</td><td>{{ post.manufacturer }}</td><td>Name</td><td>{{ post.title }}</td>
+    </tr>   
+    <tr>
+        <td>Type</td><td>{{ post.type }}</td>
+    </tr>
+    <tr>
+        <td>Country of Origin</td><td>{{ post.origin }}</tr>
+    </tr>
+    <tr>
+        <td>First Flight</td><td> {{ post.firstFlight }}</td><td>Date Introduced</td><td>{{ post.introduction }}</td>
+    </tr>
+    <tr>
+        <td>Status</td><td>{{ post.status }}</td>
+    </tr>
+    <tr>
+        <td>Number Built</td><td>{{ postnumberBuilt}}</td>
+    </tr>
+    <tr>
+        <td>Number Built</td><td>{{ post.numberBuilt}}</td>
+    </tr>
+    <tr>
+        <td>History</td><td>{{ post.history }}</td>
+    </tr>
+    <tr>
+        <td>Author</td><td>{{ post.author }}</td>
+    </tr>
+</table>
 
 <br>
 <br>
 {% if user.is_authenticated %}
-    <a href="{% url 'update_post' post.pk %}">Edit</a>
-    <a href="{% url 'delete_post' post.pk %}">Delete</a>
+    <a class="btn btn-secondary" href="{% url 'update_post' post.pk %}">Edit</a>
+    <a class="btn btn-secondary" href="{% url 'delete_post' post.pk %}">Delete</a>
 {% endif %}
 <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
 {% endblock %}

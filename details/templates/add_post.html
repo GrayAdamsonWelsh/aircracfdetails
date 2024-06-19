@@ -3,14 +3,37 @@
 <h1>Add Aircraft</h1>
 <br>
 <br>
-<div class="form-group">
-    <form method="POST">
+<div>
         {% csrf_token  %}
-        {{ form.as_p }}
-        {% if user.is_authenticated %}
-            <button class="btn btn-secondary">Post</button>
-        {% endif %}
+        <table>
+            <tr>
+                <td>Manufacturer</td><td>{{ form.manufacturer }}</td><td>Name</td><td>{{ form.title }}</td>
+            </tr>   
+            <tr>
+                <td>Type</td><td>{{ form.type }}</td>
+            </tr>
+            <tr>
+                <td>Country of Origin</td><td>{{ form.origin }}</tr>
+            </tr>
+            <tr>
+                <td>First Flight</td><td> {{ form.firstFlight }}</td><td>Date Introduced</td><td>{{ form.introduction }}</td>
+            </tr>
+            <tr>
+                <td>Status</td><td>{{ form.status }}</td>
+            </tr>
+            <tr>
+                <td>Number Built</td><td>{{ form.numberBuilt}}</td>
+            </tr>
+            <tr>
+                <td>History</td><td>{{ form.history }}</td>
+            </tr>
+            <tr>
+                <td>Author</td><td>{{ form.author }}</td>
+            </tr>
+        </table>
 
-    </form>
+        {% if user.is_authenticated %}
+            <button class="btn btn-secondary">Add</button>
+        {% endif %}
 </div>
 {% endblock %}
